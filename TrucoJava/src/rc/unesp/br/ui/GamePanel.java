@@ -99,6 +99,8 @@ public class GamePanel extends JPanel {
         this.constraints.gridy = 0;
         this.constraints.anchor = GridBagConstraints.NORTH;
 
+        this.add(new JLabel(FileResourseString.Player2), constraints);
+
         this.add(this.topPlayerPanel, this.constraints);
     }
 
@@ -112,6 +114,8 @@ public class GamePanel extends JPanel {
         this.constraints.gridx = 0;
         this.constraints.gridy = 2;
         this.constraints.anchor = GridBagConstraints.SOUTH;
+
+        this.add(new JLabel(FileResourseString.Player1), constraints);
 
         this.add(this.bottomPlayerPanel, this.constraints);
     }
