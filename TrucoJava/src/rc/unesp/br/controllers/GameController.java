@@ -114,8 +114,9 @@ public class GameController {
             }
         }
 
-        IGameWinnerRepository iGameWinnerRepository = new GameWinnerRepository();
-        iGameWinnerRepository.insertGameWinner(pointWinner);
+        // BARB: validar se iremos retirar a conexão com o banco (quando acada o jgo ele chama esse cara pra gravar quem ganhou, se tirar removemos um problema)
+        //IGameWinnerRepository iGameWinnerRepository = new GameWinnerRepository();
+        //iGameWinnerRepository.insertGameWinner(pointWinner);
     }
 
     /**

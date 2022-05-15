@@ -1,6 +1,5 @@
 package rc.unesp.br.controllers;
 
-import rc.unesp.br.beans.Card;
 import rc.unesp.br.beans.Player;
 import rc.unesp.br.ui.MainView;
 

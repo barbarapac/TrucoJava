@@ -6,4 +6,5 @@ public final class FileResourseString {
     public static String GameScore = "GAME SCORE";
     public static String RoundScore = "ROUND SCORE";
     public static String Arrow = " ===> ";
+    public static String TitleGame = "Truco";
 }

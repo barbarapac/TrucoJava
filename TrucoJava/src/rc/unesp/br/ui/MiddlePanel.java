@@ -6,7 +6,6 @@ import rc.unesp.br.controllers.GameController;
 import javax.swing.*;
 import java.awt.*;
 import java.util.*;
-import java.util.List;
 
 /**
  * Class for the view section of the app.

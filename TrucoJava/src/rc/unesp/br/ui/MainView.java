@@ -21,7 +21,7 @@ public class MainView extends JFrame {
      * Constructor of the class.
      */
     public MainView() {
-        super("Truco");
+        super(FileResourseString.TitleGame);
 
         // Set the initial options for the frame
         this.initMainViewOpts();
