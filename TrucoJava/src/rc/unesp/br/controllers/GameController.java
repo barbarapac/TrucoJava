@@ -1,7 +1,5 @@
 package rc.unesp.br.controllers;
 
-import rc.unesp.br.DAO.GameWinnerRepository;
-import rc.unesp.br.DAO.IGameWinnerRepository;
 import rc.unesp.br.beans.*;
 import rc.unesp.br.ui.MainView;
 
@@ -113,10 +111,6 @@ public class GameController {
                 this.resetPlayersRoundScore();
             }
         }
-
-        // BARB: validar se iremos retirar a conexão com o banco (quando acada o jgo ele chama esse cara pra gravar quem ganhou, se tirar removemos um problema)
-        //IGameWinnerRepository iGameWinnerRepository = new GameWinnerRepository();
-        //iGameWinnerRepository.insertGameWinner(pointWinner);
     }
 
     /**
