@@ -1,7 +1,5 @@
 package rc.unesp.br.controllers;
 
-import rc.unesp.br.DAO.GameWinnerRepository;
-import rc.unesp.br.DAO.IGameWinnerRepository;
 import rc.unesp.br.beans.*;
 import rc.unesp.br.ui.MainView;
 
@@ -113,9 +111,6 @@ public class GameController {
                 this.resetPlayersRoundScore();
             }
         }
-
-        IGameWinnerRepository iGameWinnerRepository = new GameWinnerRepository();
-        iGameWinnerRepository.insertGameWinner(pointWinner);
     }
 
     /**

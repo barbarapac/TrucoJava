@@ -33,7 +33,7 @@ public class ButtonPanel extends JPanel {
      * Create the call truco button
      */
     private void createCallTrucoButton() {
-        this.callTruco = new JButton("Truco");
+        this.callTruco = new JButton(FileResourseString.TitleGame);
         this.setCallTrucoButtonOpts();
     }
 
