@@ -121,7 +121,6 @@ public class Point {
 
         List<Player> newPlayers = new ArrayList<>();
 
-        if (firstPlayer != null) {
             newPlayers.add(firstPlayer);
 
             for (Player player : players) {
@@ -129,9 +128,6 @@ public class Point {
                     newPlayers.add(player);
                 }
             }
-        } else {
-            newPlayers = players;
-        }
 
         return newPlayers;
     }
