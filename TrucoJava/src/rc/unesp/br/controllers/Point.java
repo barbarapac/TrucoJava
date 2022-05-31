@@ -159,30 +159,6 @@ public class Point {
     }
 
     /**
-     * Get the round of the point
-     * @return {List<Round>}
-     */
-    public List<Round> getRounds() {
-        return this.rounds;
-    }
-
-    /**
-     * Set the rounds for the point
-     * @param _rounds {List<Round>}
-     */
-    public void setRounds(List<Round> _rounds) {
-        this.rounds = _rounds;
-    }
-
-    /**
-     * Get the dealer of the point
-     * @return {Player}
-     */
-    public Player getDealer() {
-        return this.dealer;
-    }
-
-    /**
      * Set the dealer of the point
      * @param _dealer {Player}
      */
