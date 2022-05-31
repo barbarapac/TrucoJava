@@ -1,7 +1,6 @@
 package rc.unesp.br.beans;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
@@ -25,10 +24,6 @@ public class Deck {
         }
     }
 
-    public List<Card> getCards() { return cards; }
-
-    public void setCards(ArrayList<Card> _deck) { this.cards = _deck; }
-
     /**
      * Return and remove a random card from the deck
      * @return {Card}
@@ -36,7 +31,6 @@ public class Deck {
     public Card drawRandomCard() {
         int index = this.randomGenerator.nextInt(cards.size());
         Card card = this.cards.get(index);
-        //System.out.println("Card Picked: " + card.toString());
         cards.remove(index);
         return card;
     }
@@ -55,39 +49,6 @@ public class Deck {
             this.cards.remove(index);
         }
         return cardArray;
-    }
-
-    /**
-     * Return and remove the first card from the deck
-     * @return {Card}
-     */
-    public Card drawTopCard() {
-        Card card = this.cards.get(0);
-        cards.remove(0);
-        System.out.println("Card Picked: " + card.toString());
-        return card;
-    }
-
-    /**
-     * Return and remove the first n cards from the Deck
-     * @param _numberOfCardsToDraw {int}
-     * @return {List<Card>}
-     */
-    public List<Card> drawTopCards(int _numberOfCardsToDraw) {
-        List<Card> cardArray = new ArrayList<>();
-        for (int i = 0; i < _numberOfCardsToDraw; i++){
-            Card card = this.cards.get(0);
-            cardArray.add(card);
-            this.cards.remove(0);
-        }
-        return cardArray;
-    }
-
-    /**
-     * Shuffle the deck
-     */
-    public void shuffleDeck() {
-        Collections.shuffle(this.cards);
     }
 
     /**
