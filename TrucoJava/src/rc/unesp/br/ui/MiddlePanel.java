@@ -36,25 +36,25 @@ public class MiddlePanel extends JPanel {
     }
 
     public void updateLastChosenCard(Card lastChosenCard) {
-        CardButton newCardButton = new CardButton(lastChosenCard, false);
-        newCardButton.setRank(lastChosenCard.getRank());
-        newCardButton.setSuit(lastChosenCard.getSuit());
-        newCardButton.setManilha(lastChosenCard.isManilha());
-
-        this.removeOldCardsFromPanel();
+        CardButton newCardButton = CreateCardButton(lastChosenCard);
         this.lastChosenCard = newCardButton;
         this.addNewCardsToPanel();
     }
 
     public void updateTurnedCard(Card card) {
+        CardButton newCardButton = CreateCardButton(card);
+        this.turnedCard = newCardButton;
+        this.addNewCardsToPanel();
+    }
+
+    private CardButton CreateCardButton(Card card) {
         CardButton newCardButton = new CardButton(card, false);
         newCardButton.setRank(card.getRank());
         newCardButton.setSuit(card.getSuit());
         newCardButton.setManilha(card.isManilha());
 
         this.removeOldCardsFromPanel();
-        this.turnedCard = newCardButton;
-        this.addNewCardsToPanel();
+        return newCardButton;
     }
 
     private void removeOldCardsFromPanel() {

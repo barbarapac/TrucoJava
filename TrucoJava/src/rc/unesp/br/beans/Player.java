@@ -22,14 +22,6 @@ public abstract class Player {
     }
 
     /**
-     * Set the new player's score
-     * @param newScore {int}
-     */
-    public void setGameScore(int newScore) {
-        this.gameScore = newScore;
-    }
-
-    /**
      * Get the current player's score
      * @return {int}
      */
@@ -57,14 +49,6 @@ public abstract class Player {
      */
     public int getRoundScore() {
         return this.roundScore;
-    }
-
-    /**
-     * Set the round score
-     * @param newScore {int}
-     */
-    public void setRoundScore(int newScore) {
-        this.roundScore = newScore;
     }
 
     /**
@@ -115,26 +99,6 @@ public abstract class Player {
         return this.hand;
     }
 
-    /**
-     * Used when a player wants to call truco
-     */
-    public void callTruco() {
-        // TODO
-    }
-
-    /**
-     * Called when a player accepts a truco call
-     */
-    public void acceptTruco() {
-        // TODO
-    }
-
-    /**
-     * Called when a player declines a truco call
-     */
-    public void fold() {
-        // TODO
-    }
 
     /**
      * Reset the player's round score to zero

@@ -19,27 +19,6 @@ public class Hand {
     }
 
     /**
-     * Add a card to the player's hand
-     * @param _card {Card} - the card to add
-     */
-    public void addCard(Card _card) {
-        if (_card != null)
-            this.cards.add(_card);
-    }
-
-    /**
-     * Draw a card from the hand, by its index, removing it.
-     * @param _index {int} - the index of the card to draw
-     * @return {Card}
-     * @throws IndexOutOfBoundsException
-     */
-    public Card drawCard(int _index) throws IndexOutOfBoundsException {
-        Card card = this.cards.get(_index);
-        this.cards.remove(_index);
-        return card;
-    }
-
-    /**
      * Draw the next card of the hand
      * @return {Card}
      */
