@@ -121,7 +121,6 @@ public class Point {
 
         List<Player> newPlayers = new ArrayList<>();
 
-        if (firstPlayer != null) {
             newPlayers.add(firstPlayer);
 
             for (Player player : players) {
@@ -129,9 +128,6 @@ public class Point {
                     newPlayers.add(player);
                 }
             }
-        } else {
-            newPlayers = players;
-        }
 
         return newPlayers;
     }
@@ -160,30 +156,6 @@ public class Point {
      */
     public void setEnded(boolean _ended) {
         this.ended = _ended;
-    }
-
-    /**
-     * Get the round of the point
-     * @return {List<Round>}
-     */
-    public List<Round> getRounds() {
-        return this.rounds;
-    }
-
-    /**
-     * Set the rounds for the point
-     * @param _rounds {List<Round>}
-     */
-    public void setRounds(List<Round> _rounds) {
-        this.rounds = _rounds;
-    }
-
-    /**
-     * Get the dealer of the point
-     * @return {Player}
-     */
-    public Player getDealer() {
-        return this.dealer;
     }
 
     /**
