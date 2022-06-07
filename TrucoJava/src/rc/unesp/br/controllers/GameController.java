@@ -139,6 +139,21 @@ public class GameController {
     }
 
     /**
+     * returns if humanPlayer is choosing card
+     * @return boolean
+     */
+    public Boolean isChoosingCard() {
+        Boolean isChoosingCard = false;
+        for (Player player : this.players) {
+            if (player instanceof HumanPlayer) {
+                isChoosingCard = ((HumanPlayer) player).isChoosingCard();
+            }
+        }
+
+        return isChoosingCard;
+    }
+
+    /**
      * Set the new status of the game
      * @param ended {Boolean}
      */
