@@ -35,14 +35,6 @@ public class Hand {
     }
 
     /**
-     * Get the current size of the player's hand
-     * @return {int}
-     */
-    public int getHandSize() {
-        return cards.size();
-    }
-
-    /**
      * Get a card by its index.
      * Similar to drawCard, but it does not remove the card from the hand.
      * @param _position {int} - the index of the card
@@ -51,12 +43,5 @@ public class Hand {
      */
     public Card getCard(int _position) throws IndexOutOfBoundsException {
         return cards.get(_position);
-    }
-
-    /**
-     * Reset the player's hand
-     */
-    public void resetHand() {
-        this.cards.clear();
     }
 }

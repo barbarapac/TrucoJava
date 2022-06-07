@@ -53,14 +53,6 @@ public class GameController {
     }
 
     /**
-     * Get the reference to the view layer
-     * @return {MainView}
-     */
-    public MainView getView() {
-        return this.view;
-    }
-
-    /**
      * Set the reference to the view layer.
      * @param view {MainView}
      */

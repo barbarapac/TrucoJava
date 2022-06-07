@@ -116,20 +116,4 @@ public class Round {
     public void setEnded(boolean _ended) {
         this.ended = _ended;
     }
-
-    /**
-     * Check is a round has tied.
-     * @return {Boolean}
-     */
-    public boolean isTied() {
-        return this.tied;
-    }
-
-    /**
-     * Set the new tied status of the round
-     * @param _tied {Boolean}
-     */
-    public void setTied(boolean _tied) {
-        this.tied = _tied;
-    }
 }

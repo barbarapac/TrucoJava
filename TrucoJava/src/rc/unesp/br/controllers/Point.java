@@ -183,14 +183,6 @@ public class Point {
     }
 
     /**
-     * Get the real value of the point
-     * @return {PointValue}
-     */
-    public PointValue getPointValue() {
-        return this.pointValue;
-    }
-
-    /**
      * Set the new real value of the point
      * @param _value {PointValue}
      */
