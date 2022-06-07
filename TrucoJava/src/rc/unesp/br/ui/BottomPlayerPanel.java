@@ -46,11 +46,14 @@ public class BottomPlayerPanel extends JPanel {
             newCardButton.setManilha(card.isManilha());
 
             newCardButton.addActionListener(e -> {
-                CardButton cardButtonClicked = (CardButton) e.getSource();
-                cardButtonClicked.setEnabled(false);
-                this.controller.setChosenCardForHumanPlayer(cardButtonClicked.getSuit(),
-                                                            cardButtonClicked.getRank(),
-                                                            cardButtonClicked.isManilha());
+                if (this.controller.isChoosingCard()) {
+                    CardButton cardButtonClicked = (CardButton) e.getSource();
+                    cardButtonClicked.setEnabled(false);
+                    this.controller.setChosenCardForHumanPlayer(cardButtonClicked.getSuit(),
+                            cardButtonClicked.getRank(),
+                            cardButtonClicked.isManilha());
+                }
+
             });
 
             this.cards.add(newCardButton);
