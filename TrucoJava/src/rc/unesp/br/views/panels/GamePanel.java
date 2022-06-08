@@ -1,4 +1,7 @@
-package rc.unesp.br.ui;
+package rc.unesp.br.views.panels;
+
+import rc.unesp.br.resources.ResourseString;
+import rc.unesp.br.views.buttons.ButtonPanel;
 
 import java.awt.*;
 import javax.swing.*;
@@ -10,8 +13,8 @@ import javax.swing.*;
  * @author Bruno Vedovetto @bleandro
  */
 public class GamePanel extends JPanel {
-    static final int DEFAULT_PANEL_WIDTH = 300;
-    static final int DEFAULT_PANEL_HEIGHT = 150;
+    public static final int DEFAULT_PANEL_WIDTH = 300;
+    public static final int DEFAULT_PANEL_HEIGHT = 150;
 
     public BottomPlayerPanel bottomPlayerPanel;
     public TopPlayerPanel topPlayerPanel;
@@ -99,7 +102,7 @@ public class GamePanel extends JPanel {
         this.constraints.gridy = 0;
         this.constraints.anchor = GridBagConstraints.NORTH;
 
-        this.add(new JLabel(FileResourseString.Player2), constraints);
+        this.add(new JLabel(ResourseString.PANEL_PLAYER_TWO), constraints);
 
         this.add(this.topPlayerPanel, this.constraints);
     }
@@ -115,7 +118,7 @@ public class GamePanel extends JPanel {
         this.constraints.gridy = 2;
         this.constraints.anchor = GridBagConstraints.SOUTH;
 
-        this.add(new JLabel(FileResourseString.Player1), constraints);
+        this.add(new JLabel(ResourseString.PANEL_PLAYER_ONE), constraints);
 
         this.add(this.bottomPlayerPanel, this.constraints);
     }

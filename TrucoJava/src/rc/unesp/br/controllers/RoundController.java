@@ -1,8 +1,9 @@
 package rc.unesp.br.controllers;
 
-import rc.unesp.br.beans.Card;
-import rc.unesp.br.beans.Player;
-import rc.unesp.br.ui.MainView;
+import rc.unesp.br.models.Card;
+import rc.unesp.br.models.Player;
+import rc.unesp.br.resources.ResourseString;
+import rc.unesp.br.views.MainView;
 
 import java.util.List;
 
@@ -12,7 +13,7 @@ import java.util.List;
  * @author Bruno Vedovetto @bleandro
  * @author Dalton Lima @daltonbr
  */
-public class Round {
+public class RoundController {
     private MainView view;
     private boolean ended = false;
     private boolean tied = false;
@@ -58,7 +59,7 @@ public class Round {
             if (winnerPlayer != null) {
                 winnerPlayer.increaseRoundScore();
 
-                if (winnerPlayer.getName().equals("player1")) {
+                if (winnerPlayer.getName().equals(ResourseString.HUMAN_PLAYER)) {
                     this.view.gamePanel.scorePanel.setPlayer1RoundScore(winnerPlayer.getRoundScore());
                 } else {
                     this.view.gamePanel.scorePanel.setPlayer2RoundScore(winnerPlayer.getRoundScore());

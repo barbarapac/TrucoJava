@@ -1,7 +1,10 @@
 package rc.unesp.br.controllers;
 
-import rc.unesp.br.beans.*;
-import rc.unesp.br.ui.MainView;
+import rc.unesp.br.models.*;
+import rc.unesp.br.resources.ResourseString;
+import rc.unesp.br.resources.enums.Rank;
+import rc.unesp.br.resources.enums.Suit;
+import rc.unesp.br.views.MainView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,8 +31,8 @@ public class GameController {
      */
     public void initGame() {
         // Create the players. Initially, this will be just two
-        HumanPlayer player1 = new HumanPlayer("player1");
-        CPUPlayer player2 = new CPUPlayer("CPU player");
+        HumanPlayer player1 = new HumanPlayer(ResourseString.HUMAN_PLAYER);
+        CPUPlayer player2 = new CPUPlayer(ResourseString.CPU_PLAYER);
         this.players.add(player1);
         this.players.add(player2);
         //TODO: Ckeck this: instantiating any card here, just to avoid null
@@ -89,7 +92,7 @@ public class GameController {
 
 
             // Instantiate a new point
-            Point point = new Point(this.players);
+            PointController point = new PointController(this.players);
             point.setView(this.view);
             point.initPoint(this.players);
 
@@ -112,7 +115,7 @@ public class GameController {
         for (Player player : this.players) {
             player.resetRoundScore();
 
-            if (player.getName().equals("player1")) {
+            if (player.getName().equals(ResourseString.HUMAN_PLAYER)) {
                 this.view.gamePanel.scorePanel.setPlayer1RoundScore(player.getRoundScore());
             } else {
                 this.view.gamePanel.scorePanel.setPlayer2RoundScore(player.getRoundScore());

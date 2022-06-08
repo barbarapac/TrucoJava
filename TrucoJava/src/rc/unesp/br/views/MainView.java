@@ -1,7 +1,9 @@
-package rc.unesp.br.ui;
+package rc.unesp.br.views;
 
-import rc.unesp.br.beans.Card;
+import rc.unesp.br.models.Card;
 import rc.unesp.br.controllers.GameController;
+import rc.unesp.br.resources.ResourseString;
+import rc.unesp.br.views.panels.GamePanel;
 
 import javax.swing.*;
 import java.util.List;
@@ -21,7 +23,7 @@ public class MainView extends JFrame {
      * Constructor of the class.
      */
     public MainView() {
-        super(FileResourseString.TitleGame);
+        super(ResourseString.TITLE_GAME);
 
         // Set the initial options for the frame
         this.initMainViewOpts();
