@@ -1,4 +1,6 @@
-package rc.unesp.br.ui;
+package rc.unesp.br.views.panels;
+
+import rc.unesp.br.resources.ResourseString;
 
 import javax.swing.*;
 import java.awt.*;
@@ -34,17 +36,17 @@ public class ScorePanel extends JPanel {
     }
 
     public void setPlayer1RoundScore(int score) {
-        this.player1RoundScore.setText(FileResourseString.Player1 + FileResourseString.Arrow + score);
+        this.player1RoundScore.setText(ResourseString.PANEL_PLAYER_ONE + ResourseString.ARROW + score);
     }
 
-    public void setPlayer2RoundScore(int score) { this.player2RoundScore.setText(FileResourseString.Player2 + FileResourseString.Arrow + score); }
+    public void setPlayer2RoundScore(int score) { this.player2RoundScore.setText(ResourseString.PANEL_PLAYER_TWO + ResourseString.ARROW + score); }
 
     private void setLabelsOptions() {
         GridBagConstraints constraints = new GridBagConstraints();
         constraints.gridx = 0;
         constraints.gridy = 0;
 
-        this.add(new JLabel(FileResourseString.GameScore), constraints);
+        this.add(new JLabel(ResourseString.GAME_SCORE), constraints);
 
         constraints.gridy = 1;
         this.add(this.player1GameScore, constraints);
@@ -56,7 +58,7 @@ public class ScorePanel extends JPanel {
         this.add(new JLabel(" "), constraints);
 
         constraints.gridy = 4;
-        this.add(new JLabel(FileResourseString.RoundScore), constraints);
+        this.add(new JLabel(ResourseString.ROUND_SCORE), constraints);
 
         constraints.gridy = 5;
         this.add(this.player1RoundScore, constraints);
@@ -70,7 +72,7 @@ public class ScorePanel extends JPanel {
      * @param score {int}
      */
     public void setPlayer1GameScore(int score) {
-        this.player1GameScore.setText(FileResourseString.Player1 + FileResourseString.Arrow + score);
+        this.player1GameScore.setText(ResourseString.PANEL_PLAYER_ONE + ResourseString.ARROW + score);
     }
 
     /**
@@ -78,7 +80,7 @@ public class ScorePanel extends JPanel {
      * @param score {int}
      */
     public void setPlayer2GameScore(int score) {
-        this.player2GameScore.setText(FileResourseString.Player2 + FileResourseString.Arrow + score);
+        this.player2GameScore.setText(ResourseString.PANEL_PLAYER_TWO + ResourseString.ARROW + score);
     }
 
     private void setInitialOpts() {

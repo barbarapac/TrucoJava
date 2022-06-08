@@ -1,6 +1,8 @@
-package rc.unesp.br.beans;
+package rc.unesp.br.models;
 
-import org.omg.CORBA.PUBLIC_MEMBER;
+import rc.unesp.br.resources.ResourseString;
+import rc.unesp.br.resources.enums.Rank;
+import rc.unesp.br.resources.enums.Suit;
 
 /**
  * Class to represent one card of the game.
@@ -9,9 +11,6 @@ import org.omg.CORBA.PUBLIC_MEMBER;
  * @author lucas Pinheiro @lucaspin
  */
 public class Card implements Comparable<Card> {
-    public static final String BACK_CARD_IMAGE_SOURCE = "/rc/unesp/br/resources/cardBack_red3.png";
-    static final String IMAGE_BASE_URI = "/rc/unesp/br/resources/";
-
     private Suit suit;
     private Rank rank;
     private boolean manilha;
@@ -27,7 +26,7 @@ public class Card implements Comparable<Card> {
         setSuit(_suit);
         setRank(_rank);
         setManilha(_manilha);
-        this.setImageSource(IMAGE_BASE_URI + this.toString() + ".png");
+        this.setImageSource(ResourseString.IMAGE_BASE_URI + this.toString() + ResourseString.IMAGE_EXTENSION);
     }
 
     /**
@@ -57,7 +56,7 @@ public class Card implements Comparable<Card> {
     /**
      * Set the image source for the standard Back Card
      */
-    public void setBackCardImageSource() {this.imageSource = BACK_CARD_IMAGE_SOURCE;}
+    public void setBackCardImageSource() {this.imageSource = ResourseString.BACK_CARD_IMAGE_SOURCE;}
 
     /**
      * Set if a card is a manilha

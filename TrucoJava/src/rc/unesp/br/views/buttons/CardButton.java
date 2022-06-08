@@ -1,8 +1,9 @@
-package rc.unesp.br.ui;
+package rc.unesp.br.views.buttons;
 
-import rc.unesp.br.beans.Card;
-import rc.unesp.br.beans.Rank;
-import rc.unesp.br.beans.Suit;
+import rc.unesp.br.models.Card;
+import rc.unesp.br.resources.ResourseString;
+import rc.unesp.br.resources.enums.Rank;
+import rc.unesp.br.resources.enums.Suit;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -23,7 +24,7 @@ public class CardButton extends JButton {
      * @param card {String}
      * @param faceDown {Boolean}
      */
-    CardButton(Card card, boolean faceDown) {
+    public CardButton(Card card, boolean faceDown) {
         super(card.toString());
         this.setFocusable(false);
         try {
@@ -33,7 +34,7 @@ public class CardButton extends JButton {
             if (!faceDown) {
                 source = card.getImageSource();
             } else {
-                source = Card.BACK_CARD_IMAGE_SOURCE;
+                source = ResourseString.BACK_CARD_IMAGE_SOURCE;
             }
 
             Image cardImage = ImageIO.read(getClass().getResource(source));

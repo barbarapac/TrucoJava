@@ -1,4 +1,4 @@
-package rc.unesp.br.beans;
+package rc.unesp.br.resources.enums;
 
 /**
  * Enum to hold the rank values for a card.

@@ -1,7 +1,9 @@
 package rc.unesp.br.controllers;
 
-import rc.unesp.br.beans.Player;
-import rc.unesp.br.ui.MainView;
+import rc.unesp.br.models.Player;
+import rc.unesp.br.resources.ResourseString;
+import rc.unesp.br.resources.enums.Point;
+import rc.unesp.br.views.MainView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,20 +15,20 @@ import java.util.ListIterator;
  * @author Bruno Vedovetto @bleandro
  * @author Dalton Lima @daltonbr
  */
-public class Point {
+public class PointController {
     private MainView view;
     private boolean ended = false;
-    private List<Round> rounds = new ArrayList<>();
+    private List<RoundController> rounds = new ArrayList<>();
     private Player dealer;
     private Player winner;
-    private PointValue pointValue;
+    private Point pointValue;
 
     /**
      * Constructor of the class
      */
-    public Point(List<Player> playersInOrder) {
+    public PointController(List<Player> playersInOrder) {
         this.setDealer(playersInOrder.get(0));
-        this.setPointValue(PointValue.ONE);
+        this.setPointValue(Point.ONE);
     }
 
     /**
@@ -37,8 +39,8 @@ public class Point {
         this.createRounds();
 
         while (!this.isEnded()) {
-            Round previousRound = null;
-            ListIterator<Round> it = this.rounds.listIterator();
+            RoundController previousRound = null;
+            ListIterator<RoundController> it = this.rounds.listIterator();
 
             // TODO: add logic to treat tie cases and others
             while (it.hasNext() && !this.isEnded()) {
@@ -54,7 +56,7 @@ public class Point {
                     playersInOrder = this.orderPlayers(playersInOrder, previousRound.getWinner());
                 }
 
-                Round nextRound = it.next();
+                RoundController nextRound = it.next();
                 nextRound.setView(this.view);
                 nextRound.setPlayersInOrder(playersInOrder);
                 nextRound.initRound();
@@ -94,7 +96,7 @@ public class Point {
     public void endPoint(Player winner){
         winner.increaseGameScore(this.pointValue.getValue());
 
-        if (winner.getName().equals("player1")) {
+        if (winner.getName().equals(ResourseString.HUMAN_PLAYER)) {
             this.view.gamePanel.scorePanel.setPlayer1GameScore(winner.getGameScore());
         } else {
             this.view.gamePanel.scorePanel.setPlayer2GameScore(winner.getGameScore());
@@ -137,7 +139,7 @@ public class Point {
      */
     private void createRounds() {
         for (int i = 0; i < 3; i++) {
-            Round round = new Round();
+            RoundController round = new RoundController();
             this.rounds.add(round);
         }
     }
@@ -186,7 +188,7 @@ public class Point {
      * Set the new real value of the point
      * @param _value {PointValue}
      */
-    public void setPointValue(PointValue _value) {
+    public void setPointValue(Point _value) {
         this.pointValue = _value;
     }
 }

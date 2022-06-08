@@ -1,4 +1,7 @@
-package rc.unesp.br.beans;
+package rc.unesp.br.models;
+
+import rc.unesp.br.resources.enums.Rank;
+import rc.unesp.br.resources.enums.Suit;
 
 import java.util.ArrayList;
 import java.util.List;

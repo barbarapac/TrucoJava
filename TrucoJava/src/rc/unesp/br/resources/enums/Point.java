@@ -1,4 +1,4 @@
-package rc.unesp.br.controllers;
+package rc.unesp.br.resources.enums;
 
 /**
  * Class that represents a round of a point of the game.
@@ -6,7 +6,7 @@ package rc.unesp.br.controllers;
  * @author Bruno Vedovetto @bleandro
  * @author Dalton Lima @daltonbr
  */
-public enum PointValue {
+public enum Point {
     ONE(1),
     THREE(3),
     SIX(6),
@@ -15,7 +15,7 @@ public enum PointValue {
 
     private int value;
 
-    PointValue(int _value) {
+    Point(int _value) {
         this.value = _value;
     }
 

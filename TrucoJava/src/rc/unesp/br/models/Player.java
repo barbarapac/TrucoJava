@@ -1,4 +1,4 @@
-package rc.unesp.br.beans;
+package rc.unesp.br.models;
 
 /**
  * Class to represent a player of the game.

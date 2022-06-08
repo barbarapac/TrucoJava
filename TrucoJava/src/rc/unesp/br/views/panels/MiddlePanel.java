@@ -1,7 +1,8 @@
-package rc.unesp.br.ui;
+package rc.unesp.br.views.panels;
 
-import rc.unesp.br.beans.Card;
+import rc.unesp.br.models.Card;
 import rc.unesp.br.controllers.GameController;
+import rc.unesp.br.views.buttons.CardButton;
 
 import javax.swing.*;
 import java.awt.*;

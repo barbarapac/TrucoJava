@@ -1,4 +1,4 @@
-package rc.unesp.br.beans;
+package rc.unesp.br.models;
 
 import java.util.List;
 

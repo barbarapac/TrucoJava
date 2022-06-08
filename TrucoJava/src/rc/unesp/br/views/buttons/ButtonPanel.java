@@ -1,4 +1,7 @@
-package rc.unesp.br.ui;
+package rc.unesp.br.views.buttons;
+
+import rc.unesp.br.resources.ResourseString;
+import rc.unesp.br.views.panels.GamePanel;
 
 import javax.swing.*;
 import java.awt.*;
@@ -17,7 +20,7 @@ public class ButtonPanel extends JPanel {
     /**
      * Constructor of the class
      */
-    ButtonPanel() {
+    public ButtonPanel() {
         super();
         this.setInitialOpts();
         this.createCallTrucoButton();
@@ -33,7 +36,7 @@ public class ButtonPanel extends JPanel {
      * Create the call truco button
      */
     private void createCallTrucoButton() {
-        this.callTruco = new JButton(FileResourseString.TitleGame);
+        this.callTruco = new JButton(ResourseString.TITLE_GAME);
         this.setCallTrucoButtonOpts();
     }
 
